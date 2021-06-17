@@ -10,7 +10,6 @@
 /* START NAV*/
 nav {
     text-align: center;
-    margin-bottom: 10px;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
@@ -59,6 +58,7 @@ nav .current {
 section article {
     padding: 5em;
     width: 80%;
+    background-color: white;
 }
 
 
@@ -95,6 +95,7 @@ footer {
 
 /* classes */
 
+/*Main Page*/
 .text {
     width: 100%;
     min-height: 50vh;
@@ -140,11 +141,22 @@ footer {
 .hero {
     width: 100%;
     height: 100vh;
-    background: url(../images/1.jpg) fixed no-repeat center bottom;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.herovid {
+        position:fixed;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height:auto;
+        z-index: -1;
 }
 
 .hero h1 {
@@ -156,9 +168,9 @@ footer {
 .title {
     padding: 5em;
     text-align: center;
+    z-index: 1;
     background: url(../images/2.jpg) fixed no-repeat left bottom;
 }
-
 
 
 .gallery {
@@ -478,3 +490,27 @@ footer {
     }
   }
   
+
+
+
+  /*Mobile View. */
+@media only screen and (max-width:980px) {
+
+        video.herovid {
+                display: none;
+        }
+
+        header.hero {
+                background: url("../images/1.jpg");
+                background-size: cover;
+        }
+
+        header.title {
+                background-size: cover;
+        }
+
+        .gallery{
+                width:100%;
+                max-width: 100vw;
+        }
+  }
