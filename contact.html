@@ -2,8 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta namne = "viewport" content  = "width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content = "ie=edge">
-    <title>FAQ</title>
+    <title>Contact Us</title>
     <link href="css/style.css" rel="stylesheet" typ="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
@@ -26,38 +25,40 @@
             
         </nav>
 
-    <section class = "faq">
-        <article>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit? </h4>
-           <p> Integer consectetur lectus nisl, at luctus lectus efficitur id.
-             Nam pharetra nisl eget nisl gravida, id tempor purus porta.</p>
-        </article>
+    <fieldset>
+        <legend>
+            <h3>Send us an Email!</h3>
+        </legend>
+        <form action = "mailto:spencer.cane99@gmail.com" method = "POST" enctype="text/plain" validate>
+            <label for ="firstName">First Name</label>
+            <input type = "text" id = "firstName" placeholder = "John" name = "firstName" required>
 
-        <article>
-            <h4>Vivamus aliquam ut metus cursus rhoncus? </h4>
-           <p> Nulla sed velit quis risus faucibus varius ut sit amet ipsum.</p>
-        </article>
+            <label for ="LastName">Last Name</label>
+            <input type = "text" id = "firstName" placeholder = "John" name = "firstName" required>
 
-        <article>
-            <h4>Duis suscipit pretium nibh, eleifend vulputate ipsum eleifend sed? </h4>
-           <p> Etiam porttitor risus vitae lobortis posuere, Duis tincidunt feugiat laoreet.</p>
-        </article>
+            <label for ="email">Email Address</label>
+            <input type = "email" id = "email" placeholder = "Johndoe@example.com" name = "email" required>
 
-        <article>
-            <h4>In sollicitudin mattis massa sit amet pulvinar? </h4>
-           <p> Donec venenatis nulla ac odio faucibus imperdiet, Quisque vitae nunc nisl.</p>
-        </article>
 
-        <article>
-            <h4>Phasellus consequat orci dapibus nulla tristique bibendum? </h4>
-           <p>Maecenas sagittis ex tortor, ut rutrum ipsum dapibus sit amet.</p>
-        </article>
+           <label for = "subject">Subject</label>
+           <select name = "subject" id = "subject">
+               <option value = " " hidden selected>Select a Subject</option>
+               <option value = "Billing">Billing</option>
+               <option value = "Quote">Quote</option>
+               <option value = "Question">Question</option>
+               <option value = "Other">Other</option>
+           </select>
 
-        <article>
-            <h4>Phasellus consequat orci dapibus nulla tristique bibendum? </h4>
-           <p>Maecenas sagittis ex tortor, ut rutrum ipsum dapibus sit amet.</p>
-        </article>
-    </section>
+
+           <label for="text">Message</label>
+              <textarea id="message" name="message" placeholder="Please enter your message."></textarea>
+
+            
+            <input type="submit" value="SEND">
+
+
+        </form>
+    </fieldset>
   
 
     <section class = "center">
